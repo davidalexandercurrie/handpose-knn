@@ -1,41 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>PoseNet with KNN Classification on Webcam Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"
+      integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
-    <style></style>
+    <title>HandPose & KNN</title>
   </head>
-
   <body>
-    <h2>KNN Classification on PoseNet data from webcam</h2>
-    <div id="videoContainer">
-      <canvas width="640" height="480" id="myCanvas"></canvas>
-    </div>
-    <p id="status">Loading Model...</p>
-    <br />
-    <p>
-      <button id="addClassA">Add an Example to Class A</button>
-      <button id="resetA">Reset Class A</button>
-    </p>
-    <p><span id="exampleA">0</span> A examples</p>
-    <p>| Confidence in A is: <span id="confidenceA">0</span></p>
-
-    <br /><button id="addClassB">Add an Example to Class B</button>
-    <button id="resetB">Reset Class B</button>
-    <p><span id="exampleB">0</span> B examples</p>
-    <p>| Confidence in B is: <span id="confidenceB">0</span></p>
-
-    <br />
-    <p>
-      <button id="buttonPredict">Start predicting!</button><br />
-      <button id="clearAll">Clear all classes</button><br />
-    </p>
-    <p>
-      KNN Classifier with mobileNet model labeled this as Class:
-      <span id="result">...</span> with a confidence of
-      <span id="confidence">...</span>
-    </p>
     <script src="sketch.js"></script>
+
+    <div id="ui">
+      <!-- onclick lets us set a function that will be called when the button gets clicked -->
+      <!-- <button onclick="predict()">Predict!</button> -->
+    </div>
   </body>
 </html>
